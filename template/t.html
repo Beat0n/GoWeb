@@ -8,4 +8,16 @@
     <title>tmpl test</title>
 </head>
 <body>
-    <h1>{{loveGo}} {{.}}</h1>
+    <h1>测试嵌套tmpl</h1>
+    <hr>
+    {{template "ul.html"}}
+    <hr>
+    {{template "ol.html"}}
+</body>
+</html>
+{{ define "ol.html"}}<h1>这是ol.html</h1><ol>
+    <li>Go</li>
+    <li>C</li>
+    <li>Java</li>
+</ol>
+{{end}}
