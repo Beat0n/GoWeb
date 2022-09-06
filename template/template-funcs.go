@@ -35,12 +35,12 @@ func sayHello1(w http.ResponseWriter, r *http.Request) {
 		"Welcome": Welcome,
 		"Doing":   Doing,
 	}
-	name := "shirdon"
+	name := "hujizhe"
 	tmpl2, err := template.New("test").Funcs(funcMap).Parse("{{Welcome}}\n{{Doing .}}\n")
 	if err != nil {
 		panic(err)
 	}
-	tmpl1.Execute(w, name)
+	tmpl1.Execute(w, nil)
 	tmpl2.Execute(w, name)
 }
 
