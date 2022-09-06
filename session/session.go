@@ -85,6 +85,3 @@ func (manager *Manager) SessionStart(w http.ResponseWriter, r *http.Request) (se
 	}
 	return
 }
-func main() {
-
-}
